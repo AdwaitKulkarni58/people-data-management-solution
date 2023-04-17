@@ -3,10 +3,12 @@ package com.adwait.project.employeeservice;
 import org.modelmapper.*;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
+import org.springframework.cloud.netflix.eureka.*;
 import org.springframework.context.annotation.*;
 import org.springframework.web.reactive.function.client.*;
 
 @SpringBootApplication
+@EnableEurekaClient
 public class EmployeeServiceApplication {
 
     @Bean
