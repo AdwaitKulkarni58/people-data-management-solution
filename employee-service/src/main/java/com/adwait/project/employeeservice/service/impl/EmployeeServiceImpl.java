@@ -7,12 +7,17 @@ import com.adwait.project.employeeservice.service.*;
 import lombok.*;
 import org.modelmapper.*;
 import org.springframework.stereotype.*;
+import org.springframework.web.reactive.function.client.*;
 
 @Service
 @AllArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
 
     private EmployeeRepository employeeRepository;
+
+    // private RestTemplate restTemplate;
+
+    private WebClient webClient;
 
     private ModelMapper modelMapper;
 
@@ -24,8 +29,17 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public EmployeeDto getEmployeeById(Long employeeId) {
+    public APIResponseDto getEmployeeById(Long employeeId) {
         Employee employee = employeeRepository.findById(employeeId).get();
-        return modelMapper.map(employee, EmployeeDto.class);
+        DepartmentDto departmentDto = webClient.get()
+                .uri("http://localhost:8080/api/departments/" + employee.getDepartmentCode())
+                .retrieve()
+                .bodyToMono(DepartmentDto.class)
+                .block();
+        EmployeeDto employeeDto = modelMapper.map(employee, EmployeeDto.class);
+        APIResponseDto apiResponseDto = new APIResponseDto();
+        apiResponseDto.setEmployeeDto(employeeDto);
+        apiResponseDto.setDepartmentDto(departmentDto);
+        return apiResponseDto;
     }
 }

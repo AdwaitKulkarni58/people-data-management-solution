@@ -6,6 +6,6 @@ public interface EmployeeService {
 
     public EmployeeDto saveEmployee(EmployeeDto employeeDto);
 
-    public EmployeeDto getEmployeeById(Long employeeId);
+    public APIResponseDto getEmployeeById(Long employeeId);
 
 }
