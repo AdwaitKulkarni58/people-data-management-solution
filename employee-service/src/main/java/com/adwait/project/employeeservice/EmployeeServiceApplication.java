@@ -3,6 +3,7 @@ package com.adwait.project.employeeservice;
 import org.modelmapper.*;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
+import org.springframework.cloud.client.loadbalancer.*;
 import org.springframework.cloud.netflix.eureka.*;
 import org.springframework.context.annotation.*;
 import org.springframework.web.reactive.function.client.*;
@@ -17,6 +18,7 @@ public class EmployeeServiceApplication {
     }
 
     @Bean
+    @LoadBalanced
     public WebClient webClient() {
         return WebClient.builder().build();
     }
