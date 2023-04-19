@@ -4,8 +4,8 @@ import com.adwait.project.employeeservice.dto.*;
 
 public interface EmployeeService {
 
-    public EmployeeDto saveEmployee(EmployeeDto employeeDto);
+    EmployeeDto saveEmployee(EmployeeDto employeeDto);
 
-    public APIResponseDto getEmployeeById(Long employeeId);
+    APIResponseDto getEmployeeById(Long employeeId);
 
 }

@@ -4,7 +4,7 @@ import com.adwait.project.departmentservice.dto.*;
 
 public interface DepartmentService {
 
-    public DepartmentDto saveDepartment(DepartmentDto departmentDto);
+    DepartmentDto saveDepartment(DepartmentDto departmentDto);
 
-    public DepartmentDto getDepartmentByCode(String code);
+    DepartmentDto getDepartmentByCode(String code);
 }
