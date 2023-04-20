@@ -6,11 +6,10 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmployeeDto {
+public class OrganizationDto {
+
     private Long id;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String departmentCode;
+    private String organizationName;
+    private String organizationDescription;
     private String organizationCode;
 }
