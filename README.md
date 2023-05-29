@@ -1,15 +1,15 @@
-# Company-Management-Application  
+# People-Data-Management-Solution  
   
   
 ## Purpose of Application:  
-- This microservice-based application can be used by companies and organizations, both small and big, to keep track of the employees they have, the departments these employees work in, as well as any internal organizations they might have.  
-- The project also provides a clean UI to interact with on the front-end side and efficiently manage tasks.  
+- This microservice-based application can be used by companies and organizations, both small and big, to keep track of employee data like the departments the employees work in, as well as any internal organizations they might belong to.  
+- The project also provides a clean UI to interact with on the front-end side and efficiently manage employee tasks.  
   
 <hr>  
 
-## Problem to Solve:  
-- This project provides an all-in-one management solution for any individual or organization to use efficiently, a feature not provided by many tools out there. Users usually have to utilize different services and softwares for different tasks, creating a range of problems across multiple services.
-- Many existing projects use monolithic architectural patterns to provide a range of services leading to software crashes and bugs being introduced resulting in an unpleasant user experience. This application uses a distributed microservices-based architecture and is capable of supporting multiple instances of its services thereby preventing any chance of a software outage.  
+## Features:  
+- This project provides an all-in-one data management solution for any individual or organization to use efficiently. The current solutions in the market usually utilize different services and softwares for different tasks, sometimes leading to problems across multiple services.
+- Many existing projects use monolithic architectural patterns to provide a range of services leading to software crashes and bugs being introduced resulting in an unpleasant user experience. This application uses a distributed microservices-based architecture and is capable of supporting multiple instances of its services thereby improving availability, resilience, and fault tolerance.  
 - The current architecture of this project allows internal service configurations to be stored in an external config repository, thus reducing the load on the service itself and also ensuring that the application remains dependency-free. Users no longer have to worry about messing up internal configs or service modifications slowing their tasks.  
 - Another factor that reduces the load on services as well as provides an additional security layer is the introduction of an API gateway. Whenever an external client interacts with a service by sending a request, the request is first analyzed by the gateway and then routed to the required service. This ensures the conservation of resources for the other services, thus providing efficiency and efficacy.  
 - This application also provides up-to-date logs for the requests made to different services by utilizing Spring Cloud Sleuth for distributed tracing.  
