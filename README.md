@@ -18,7 +18,8 @@
   
 ## Architecture:  
   
-![microservices_architecture](https://github.com/AdwaitKulkarni58/Company-Management-Application/assets/65598707/0def0c95-dfdb-40c0-9e8b-a3a0b296fd51)  
+![microservices_architecture (1)](https://github.com/AdwaitKulkarni58/people-data-management-solution/assets/65598707/90dd232f-cab9-4c88-8f84-3ab21cfe9194)  
+
   
 <hr>  
   
